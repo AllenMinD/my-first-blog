@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils import timezone
+import sys 
 
+reload(sys) 
+sys.setdefaultencoding("utf-8") 
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
